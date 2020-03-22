@@ -1,0 +1,13 @@
+$colors: (
+  'black': #333,
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+$base-font-family: 'Helvetica', Arial, sans-serif;
+$base-font-color: color('black');
+
+$heading-font-family: $base-font-family;
+$heading-font-color: $base-font-color;

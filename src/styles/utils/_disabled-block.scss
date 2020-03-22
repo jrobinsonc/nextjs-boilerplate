@@ -1,0 +1,13 @@
+%disabled-block {
+  opacity: 0.3;
+  cursor: wait;
+
+  * {
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.u-disabled-block {
+  @extend %disabled-block;
+}

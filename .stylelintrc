@@ -1,0 +1,31 @@
+{
+  "plugins": ["stylelint-prettier", "stylelint-scss"],
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "prettier/prettier": [true, { "severity": "warning" }],
+
+    "block-no-empty": [true, { "severity": "warning" }],
+    "comment-no-empty": [true, { "severity": "warning" }],
+    "declaration-block-no-duplicate-properties": [true, { "severity": "warning" }],
+    "declaration-block-no-shorthand-property-overrides": true,
+    "font-family-no-duplicate-names": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "function-calc-no-invalid": true,
+    "function-linear-gradient-no-nonstandard-direction": true,
+    "keyframe-declaration-no-important": true,
+    "media-feature-name-no-unknown": true,
+    "no-descending-specificity": true,
+    "no-duplicate-at-import-rules": true,
+    "no-duplicate-selectors": true,
+    "no-empty-source": true,
+    "no-extra-semicolons": [true, { "severity": "warning" }],
+    "no-invalid-double-slash-comments": true,
+    "no-unknown-animations": [true, { "severity": "warning" }],
+    "order/properties-alphabetical-order": null,
+    "selector-pseudo-class-no-unknown": true,
+    "selector-type-no-unknown": true,
+    "shorthand-property-no-redundant-values": [true, { "severity": "warning" }],
+    "string-no-newline": true,
+    "unit-no-unknown": true
+  }
+}

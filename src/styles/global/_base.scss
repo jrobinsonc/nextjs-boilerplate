@@ -1,0 +1,41 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+
+  @include breakpoint(md) {
+    font-size: 18px;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: $base-font-family;
+  color: $base-font-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  color: $heading-font-color;
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,30 @@
+$breakpoints: (
+  'sm': (
+    min-width: 640px,
+  ),
+  'md': (
+    min-width: 768px,
+  ),
+  'lg': (
+    min-width: 1024px,
+  ),
+  'xl': (
+    min-width: 1280px,
+  ),
+);
+
+// Usage
+// @include breakpoint(xs) { ... }
+// or
+// @include breakpoint("max-width: 1199px") { ... }
+@mixin breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  } @else {
+    @media ($name) {
+      @content;
+    }
+  }
+}

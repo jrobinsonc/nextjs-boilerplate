@@ -1,0 +1,15 @@
+%clearfix {
+  &::after {
+    clear: both;
+  }
+
+  &::before,
+  &::after {
+    display: table;
+    content: ' ';
+  }
+}
+
+.u-clearfix {
+  @extend %clearfix;
+}
