@@ -13,6 +13,7 @@
     "function-calc-no-invalid": true,
     "function-linear-gradient-no-nonstandard-direction": true,
     "keyframe-declaration-no-important": true,
+    "max-nesting-depth": 2,
     "media-feature-name-no-unknown": true,
     "no-descending-specificity": true,
     "no-duplicate-at-import-rules": true,
