@@ -139,6 +139,7 @@ module.exports = {
       ],
       rules: {
         'jsx-a11y/anchor-is-valid': 'off', // This should not be validated because we are using the next/link component.
+        'jsx-a11y/label-has-associated-control': 'warn',
 
         // React-specific rules.
         'react/destructuring-assignment': 'off',
