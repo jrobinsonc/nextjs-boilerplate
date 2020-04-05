@@ -1,5 +1,8 @@
 {
-  "plugins": ["stylelint-prettier", "stylelint-scss"],
+  "plugins": [
+    "stylelint-prettier",
+    "stylelint-scss"
+  ],
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
     "prettier/prettier": [true, { "severity": "warning" }],
@@ -12,8 +15,9 @@
     "font-family-no-missing-generic-family-keyword": true,
     "function-calc-no-invalid": true,
     "function-linear-gradient-no-nonstandard-direction": true,
+    "indentation": [2, { "severity": "warning" }],
     "keyframe-declaration-no-important": true,
-    "max-nesting-depth": 2,
+    "max-nesting-depth": 4,
     "media-feature-name-no-unknown": true,
     "no-descending-specificity": true,
     "no-duplicate-at-import-rules": true,
@@ -27,6 +31,8 @@
     "selector-type-no-unknown": true,
     "shorthand-property-no-redundant-values": [true, { "severity": "warning" }],
     "string-no-newline": true,
-    "unit-no-unknown": true
+    "unit-no-unknown": true,
+    "selector-class-pattern": ["[a-z_-]+", { "severity": "warning" }],
+    "selector-max-compound-selectors": [4, { "severity": "warning" }]
   }
 }

@@ -73,11 +73,14 @@ module.exports = {
 
     'prettier/prettier': ['warn', prettierOptions],
 
+    'promise/always-return': 'warn',
+    'promise/catch-or-return': 'warn',
+
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['**/*.test.tsx', '*.js'],
+        devDependencies: ['**/*.test.tsx', '**/*.js', '!src/**/*.js'],
       },
     ],
     'import/extensions': [
@@ -122,6 +125,7 @@ module.exports = {
       ],
       rules: {
         '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
       },
     },
     {
@@ -139,7 +143,16 @@ module.exports = {
       ],
       rules: {
         'jsx-a11y/anchor-is-valid': 'off', // This should not be validated because we are using the next/link component.
-        'jsx-a11y/label-has-associated-control': 'warn',
+        'jsx-a11y/label-has-associated-control': [
+          'warn',
+          {
+            labelComponents: ['label'],
+            labelAttributes: ['htmlFor'],
+            controlComponents: ['input'],
+            depth: 3,
+          },
+        ],
+        'jsx-a11y/no-static-element-interactions': 'warn',
 
         // React-specific rules.
         'react/destructuring-assignment': 'off',
