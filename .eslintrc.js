@@ -52,6 +52,7 @@ module.exports = {
     // the app is running.
     'no-unused-vars': 'warn',
     'no-warning-comments': 'warn',
+    'prefer-const': 'warn',
 
     // https://github.com/gajus/eslint-plugin-jsdoc
     'jsdoc/check-param-names': 'warn',
@@ -88,6 +89,7 @@ module.exports = {
       'ignorePackages',
       {
         tsx: 'never',
+        ts: 'never',
       },
     ],
   },
@@ -126,6 +128,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-empty-function': 'warn',
       },
     },
     {
