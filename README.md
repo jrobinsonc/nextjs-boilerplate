@@ -1,4 +1,4 @@
-# Next.js Starter Project
+# Next.js Boilerplate
 
 * Next.js
 * Typescript
