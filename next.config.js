@@ -20,10 +20,6 @@ module.exports = withSourceMaps(
       APP_VERSION: packageJson.version,
     },
 
-    sassLoaderOptions: {
-      sourceMap: true,
-      includePaths: ['src/styles', 'node_modules'],
-    },
     // We can ignore Typescript issues detected by NextJS because we are
     // using ESLint to do the validation.
     typescript: {
