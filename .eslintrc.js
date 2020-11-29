@@ -126,7 +126,9 @@ module.exports = {
         'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
       ],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off',
+        'no-use-before-define': 'off', // Disable this rule in favor of @typescript-eslint/no-use-before-define
+        '@typescript-eslint/no-use-before-define': 'error',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-empty-function': 'warn',
       },
