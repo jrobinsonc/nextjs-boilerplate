@@ -128,6 +128,10 @@ module.exports = {
       rules: {
         'no-use-before-define': 'off', // Disable this rule in favor of @typescript-eslint/no-use-before-define
         '@typescript-eslint/no-use-before-define': 'error',
+        
+        'no-shadow': 'off', // Disable this rule in favor of @typescript-eslint/no-shadow
+        '@typescript-eslint/no-shadow': 'error',
+        
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-empty-function': 'warn',
