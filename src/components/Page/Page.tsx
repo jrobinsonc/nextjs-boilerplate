@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import './Page.scss';
 
 interface PageProps {
   children: React.ReactNode;
