@@ -30,9 +30,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'prettier',
-    'plugin:prettier/recommended', // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
-    'prettier/babel',
+    'plugin:prettier/recommended' // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
 
   ignorePatterns: ['!/.*.js'],
@@ -123,15 +121,14 @@ module.exports = {
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-        'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
       ],
       rules: {
         'no-use-before-define': 'off', // Disable this rule in favor of @typescript-eslint/no-use-before-define
         '@typescript-eslint/no-use-before-define': 'error',
-        
+
         'no-shadow': 'off', // Disable this rule in favor of @typescript-eslint/no-shadow
         '@typescript-eslint/no-shadow': 'error',
-        
+
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-empty-function': 'warn',
@@ -148,7 +145,6 @@ module.exports = {
       extends: [
         'plugin:jsx-a11y/recommended',
         'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
-        'prettier/react',
       ],
       rules: {
         'jsx-a11y/anchor-is-valid': 'off', // This should not be validated because we are using the next/link component.

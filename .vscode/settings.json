@@ -1,6 +1,5 @@
 {
   // ESLint config.
-  "eslint.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.nodePath": "./node_modules/",
   "eslint.alwaysShowStatus": true,
