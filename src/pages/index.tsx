@@ -1,9 +1,14 @@
 import Page from '@app/components/Page/Page';
+import type { NextPage } from 'next';
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <Page title="Welcome">
-      <p>Next.js Starter Project.</p>
+      <p>
+        {process.env.APP_DESCRIPTION} v{process.env.APP_VERSION}.
+      </p>
     </Page>
   );
-}
+};
+
+export default Home;

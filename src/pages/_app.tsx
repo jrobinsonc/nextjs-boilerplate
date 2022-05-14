@@ -1,21 +1,19 @@
-import React from 'react';
-import App from 'next/app';
-import Head from 'next/head'
 import '@app/styles/styles.scss';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import React, { FC } from 'react';
 
-class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
-
-    return (
-      <>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </Head>
-        <Component {...pageProps} />
-      </>
-    )
-  }
-}
+const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
+};
 
 export default MyApp;
