@@ -11,18 +11,8 @@
   "stylelint.enable": true,
   "stylelint.packageManager":"yarn",
   "stylelint.validate": [
-    "css",
-    "html",
-    "less",
     "markdown",
-    "postcss",
-    "sass",
     "scss",
-    "source.css.styled",
-    "source.markdown.math",
-    "styled-css",
-    "xml",
-    "xsl"
   ],
 
   "editor.codeActionsOnSave": {
@@ -30,9 +20,6 @@
     "source.fixAll.stylelint": true
   },
 
-  // ESLint is doing the validation for Javascript files.
-  "typescript.validate.enable": false,
-  "javascript.validate.enable": false,
   // Stylelint is doing the validation for CSS files.
   "css.validate": false,
   "less.validate": false,

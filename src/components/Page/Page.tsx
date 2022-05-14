@@ -1,22 +1,29 @@
 import Head from 'next/head';
+import { FC, PropsWithChildren } from 'react';
 
 interface PageProps {
-  children: React.ReactNode;
   title: string;
+  pageClass?: string;
 }
 
-export default function Page(props: PageProps) {
+const Page: FC<PropsWithChildren<PageProps>> = ({
+  pageClass = '',
+  title,
+  children,
+}) => {
   return (
-    <div className="page">
+    <div className={`page ${pageClass}`}>
       <Head>
-        <title>{props.title}</title>
+        <title>{title}</title>
       </Head>
 
-      <main>
-        <h1>{props.title}</h1>
+      <main className="page__main">
+        <h1>{title}</h1>
 
-        {props.children}
+        {children}
       </main>
     </div>
   );
-}
+};
+
+export default Page;
