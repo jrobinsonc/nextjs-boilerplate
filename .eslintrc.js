@@ -20,6 +20,7 @@ module.exports = {
     jest: true,
     browser: true,
     es6: true,
+    node: true,
   },
 
   plugins: ['babel', 'prettier', 'promise', 'jsdoc'],
@@ -30,7 +31,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:prettier/recommended' // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    'plugin:prettier/recommended', // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
 
   ignorePatterns: ['!/.*.js'],
@@ -40,7 +41,7 @@ module.exports = {
    * See: <https://eslint.org/docs/user-guide/configuring#configuring-rules>.
    */
   rules: {
-    // These rules are defined as 'warn' becuase they're automatically
+    // These rules are defined as 'warn' because they're automatically
     // removed when building for production thru babel plugins.
     // See the file `.babelrc.js`.
     'no-console': 'warn',
@@ -160,6 +161,9 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'warn',
 
         // React-specific rules.
+        'react/no-unused-prop-types': 'warn',
+        'react/require-default-props': 'off',
+        'react/function-component-definition': 'off',
         'react/destructuring-assignment': 'off',
         'react/jsx-props-no-spreading': 'off',
         'react/react-in-jsx-scope': 'off', // NextJS doesn't require to import React into each component.
