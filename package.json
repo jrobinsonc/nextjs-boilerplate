@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "./node_modules/.bin/jest",
-    "lint:scripts": "./node_modules/.bin/eslint --ext .ts --ext .tsx src/",
-    "lint:styles": "./node_modules/.bin/stylelint src/",
-    "lint": "pnpm lint:scripts && pnpm lint:styles"
+    "test": "jest",
+    "lint:scripts": "eslint --ext .ts --ext .tsx src/",
+    "lint:styles": "stylelint src/",
+    "lint": "pnpm lint:scripts && pnpm lint:styles",
+    "lint:fix": "pnpm lint:scripts --fix && pnpm lint:styles --fix",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -62,11 +64,5 @@
   "engines": {
     "node": ">=10.16",
     "pnpm": ">=8.0.0"
-  },
-  "browserslist": [
-    ">0.3%",
-    "not ie 11",
-    "not dead",
-    "not op_mini all"
-  ]
+  }
 }
