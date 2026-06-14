@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 .env*
+tsconfig.tsbuildinfo
 
 # debug
 npm-debug.log*
@@ -28,3 +29,6 @@ yarn-error.log*
 /.vscode/*
 !/.vscode/settings.json
 !/.vscode/extensions.json
+
+# turbo
+.turbo

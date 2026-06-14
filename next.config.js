@@ -8,12 +8,8 @@ const withSourceMaps = require('@zeit/next-source-maps');
 const webpackConfig = require('./webpack.config');
 const packageJson = require('./package.json');
 
-const date = new Date();
-
 module.exports = withSourceMaps({
   env: {
-    BUILD_TIME: date.toString(),
-    BUILD_TIMESTAMP: +date,
     APP_NAME: packageJson.name,
     APP_VERSION: packageJson.version,
   },
